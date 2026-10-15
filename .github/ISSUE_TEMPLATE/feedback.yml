@@ -1,0 +1,48 @@
+name: Feedback de usuário
+description: Conte como foi sua experiência com o Clara.
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por testar o Clara. Não inclua informações pessoais, bancárias ou valores reais neste formulário.
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Como foi sua experiência?
+      options:
+        - Muito boa
+        - Boa
+        - Neutra
+        - Difícil
+    validations:
+      required: true
+  - type: textarea
+    id: useful
+    attributes:
+      label: O que funcionou bem?
+      description: Quais partes foram úteis ou fáceis de usar?
+      placeholder: Compartilhe sua impressão geral.
+    validations:
+      required: false
+  - type: textarea
+    id: problems
+    attributes:
+      label: O que não funcionou como esperado?
+      description: Descreva problemas sem incluir dados financeiros reais.
+    validations:
+      required: false
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: O que você gostaria de melhorar?
+      description: Ideias para tornar o app mais útil.
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacidade
+      options:
+        - label: Confirmo que não incluí informações pessoais ou financeiras reais.
+          required: true
